@@ -19,7 +19,7 @@
       </ul>
     </nav>
     <div id="jumbotron">
-      <div>
+      <div class="container">
         <h1>Lembur Kuring</h1>
         <span>Untukmu yang suka <strong>hijau</strong></span>
       </div>
@@ -122,9 +122,45 @@
                 </svg>
                 <a href="#kontak">Kontak</a>
               </li>
+              <li onclick="bukaModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-record" viewBox="0 0 16 16">
+                  <path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"/>
+                </svg>
+                <a>Tinggalkan pesan</a>
+              </li>
             </ul>
           </div>
         </aside>
+  
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h3 class="modal-title">Tinggalkan pesan</h3>
+        </div>
+        <div class="modal-body">
+          <form action="#" method="post" id="form-pesan">
+            <div class="input-container">
+              <label class="d-block" for="nama">Nama</label>
+              <input class="d-block w-100" type="text" name="nama" id="nama">
+            </div>
+            <div class="input-container">
+              <label class="d-block" for="email">Email</label>
+              <input class="d-block w-100" type="email" name="email" id="email">
+            </div>
+            <div class="input-container">
+              <label class="d-block" for="pesan">Pesan</label>
+              <textarea class="d-block w-100" name="pesan" id="pesan" cols="30" rows="5"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="d-block ms-auto" id="tutup">Tutup</button>
+          <button type="button" class="d-block ms-10" id="kirim">Kirim</button>
+        </div>
   
       </div>
     </div>
@@ -132,7 +168,7 @@
 
   <footer>
     <div class="container">
-      <div class="flex-row">
+      <div class="flex-row p-10">
         <div id="lokasi">
           <h2>Lokasi</h2>
           <address>
@@ -193,6 +229,8 @@
       <p class="text-center mt-50">© 2022 Lembur Kuring</p>
     </div>
   </footer>
+
+  <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
